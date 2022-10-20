@@ -1,0 +1,173 @@
+//--------------------------------------------------Миксины-----------------------------------------------//
+@mixin font($font_name, $file_name, $weight, $style){
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+//--------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------Импорт------------------------------------------------//
+@import 'nullstyle.scss';
+//--------------------------------------------------------------------------------------------------------//
+
+//--------------------------------------------------Общие стили-------------------------------------------//
+body{
+    height: 100%;
+    // font-family: 'LiteraturnayaBook';
+}
+body.lock{overflow: hidden;}
+body.lock{overflow: hidden;}
+.wrapper{
+    position: relative;
+    overflow: hidden;
+    min-height: 100%;
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    margin: 0 auto;
+    padding: 0px 71px;
+    @media (max-width:1200px){padding: 0px 40px;}
+    @media (max-width:600px){padding: 0px 20px;}
+    box-sizing: content-box;
+}
+._ibg{
+    position: relative;
+    img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+    }
+}
+
+@font-face{
+
+    font-family: 'Merienda';
+    
+    src: url('../../public/fonts/Merienda.ttf');
+    
+    src: url('../../public/fonts/Merienda.ttf') format('truetype');
+        
+    font-weight: normal;
+    
+    font-style: normal;
+    
+    }
+// .main{
+//     flex: 1 1 auto;
+//     position: relative;
+//     &-die{
+//         position: absolute;
+//         top: 80px;
+//         right: 0;
+//         background-color: #39342d;
+//         z-index: 3;
+//         width: 100%;
+//         height: 100%;
+//         opacity: 0.5;
+//         transition: all ease 0.6s;
+//         transform: translateX(120%);
+//     }
+//     &-die.active{
+//         transition: all ease 0.6s;
+//         transform: translateX(0%);
+        
+//         @media (max-width:768px){top: 65px;}
+//         @media (max-width:600px){top: 60px;}
+//     }
+// }
+// .title{
+//     position: relative;
+//     width: fit-content;
+//     margin: 0 auto 60px;
+//     @media (max-width: 900px) { margin: 0 auto 40px; }
+//     @media (max-width: 500px) { margin: 0 auto 50px;}
+//     padding: 0px 30px;
+//     color: #785117;
+//     text-transform: uppercase;
+//     font-size: 42px;
+//     @media (max-width: 900px) { font-size: 32px; padding: 0px 25px; text-align: center; }
+//     @media (max-width:768px){font-size: 25px;}
+//     @media (max-width: 630px) { font-size: 22px; }
+// }
+// .title::before{
+//     content: '';
+//     @media (max-width:900px){
+//         width: 60px;
+//         height: 2px;
+//         right: -60px;
+//     }
+//     @media (max-width:600px){
+//         width: 40px;
+//         height: 1px;
+//         right: -40px;
+//     }
+//     width: 90px;
+//     height: 3px;
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     right: -90px;
+//     background-color: #785117;
+// }
+// .title::after{
+//     content: '';
+//     width: 90px;
+//     height: 3px;
+//     @media (max-width:900px){
+//         width: 60px;
+//         height: 2px;
+//         left: -60px;
+//     }
+//     @media (max-width:600px){
+//         width: 40px;
+//         height: 1px;
+//         left: -40px;
+//     }
+//     position: absolute;
+//     top: 50%;
+//     transform: translateY(-50%);
+//     left: -90px;
+//     background-color: #785117;
+// }
+
+// .big-link {
+//     display: block;
+//     width: fit-content;
+//     margin: 0 auto;
+//     font-family: 'Literaturnaya Book';
+//     font-size: 16px;
+//     color: #785117;
+//     border-bottom: 1px solid #785117;
+//     padding: 0px 3px 15px 3px;
+// }
+// .more-link{
+//     width: fit-content;
+//     a{
+//         display: block;
+//         padding: 10px 5px;
+//         text-transform: uppercase;
+//         border-bottom: 1px solid #785117;
+//         font-size: 16px;
+//         line-height: 8px;
+//         color: #785117;
+//     }
+//     margin: 0 auto;
+//     margin-top: 90px;
+//     @media(max-width:900px){margin-top: 60px !important;}
+//     padding-bottom: 45px;
+// }
+// section:not(.about){
+//     padding: 130px 0px 0px 0px;
+//     @media(max-width:1050px){padding: 100px 0 0 0;}
+//     @media (max-width: 768px){padding: 90px 0 0 0;}
+//     @media (max-width: 600px){padding: 70px 0 0 0;}
+// }
